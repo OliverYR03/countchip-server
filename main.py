@@ -20,8 +20,6 @@ def modificar_imagen():
     try:
         args = request.args
         count_type = args.get('count_type')
-
-
         image = cv2.imread('fichasp.jpeg')
         edges = cv2.Canny(image, 40, 150)
         circles = cv2.HoughCircles(edges, cv2.HOUGH_GRADIENT, dp=1, minDist=20, param1=50, param2=30, minRadius=10, maxRadius=30)
