@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 app = Flask(__name__)
-cors = CORS(app, supports_credentials=True, expose_headers=['count_chips', 'count_type'])
+cors = CORS(app, supports_credentials=True, expose_headers=['count_chips', 'count_type','Blackcount', ])
 
 @app.route("/", methods=['GET'])
 def main_route():
